@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <title>Mynor Morales</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="top">
+        <svg
+          width="48"
+          height="48"
+          viewBox="0 0 48 61"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M21.8656 57.973L2.93729 46.5804C1.73515 45.8569 1 44.5564 1 43.1533V17.4116C1 16.0013 1.74263 14.6952 2.95457 13.9741L21.8828 2.71101C23.1397 1.96312 24.7045 1.96083 25.9636 2.70502L45.0353 13.9778C46.253 14.6975 47 16.0068 47 17.4213V43.1436C47 44.5509 46.2605 45.8546 45.0526 46.5768L25.9809 57.9791C24.7132 58.737 23.1311 58.7347 21.8656 57.973Z"
+            stroke="white"
+            stroke-width="2"
+          />
+          <path
+            d="M8.98999 44.18V21.0007C8.98999 20.1456 9.99361 19.685 10.642 20.2425L23.746 31.5101C24.1223 31.8337 24.6791 31.8323 25.0538 31.5067L39.6522 18.822M39.6522 44.18V30.5974C39.6522 29.7516 38.6675 29.2878 38.0154 29.8264L25.0353 40.548C24.6669 40.8523 24.1348 40.8535 23.7651 40.5509L13.806 32.4008"
+            stroke="white"
+            stroke-width="2"
+          />
+        </svg>
+        <button aria-expanded="false" aria-controls="menu-list">
+          <span class="open">☰</span>
+          <span class="close">×</span>
+          Menu
+        </button>
+
+        <nav class="menu">
+          <ul id="menu-list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#about">Work</a></li>
+            <li><a href="#about">Projects</a></li>
+            <li><a href="#about">Contact</a></li>
+          </ul>
+        </nav>
+        <header>
+          <img
+            src="images/photo.jpg"
+            width="120px"
+            height="120px"
+            alt="photo"
+            class="photo"
+          />
+          <p>Hi 👋 My name is</p>
+          <p>Mynor Morales</p>
+          <h1>I make things happen on the web</h1>
+          <p>
+            I'm a software engineer based in Guatemala, focused in developing
+            websites and webapps with a passion for frontend. I love to learn.
+          </p>
+        </header>
+      </div>
+      <main>
+        <section class="about">
+          <h2>About</h2>
+          <p>About about about</p>
+        </section>
+        <section class="work">
+          <h2>Work Experience</h2>
+          <p>work work work</p>
+        </section>
+        <section class="projects">
+          <h2>Projects</h2>
+          <p>projects projects projects</p>
+        </section>
+        <section class="contact">
+          <h2>Contact Me</h2>
+          <p>contact contact contact</p>
+        </section>
+      </main>
+      <footer>
+        <span>Twitter</span>
+        <span>Github</span>
+        <span>LinkedIn</span>
+      </footer>
+    </div>
+    <script>
+      const navButton = document.querySelector("button[aria-expanded]");
+      function toggleNav({ target }) {
+        const expanded =
+          target.getAttribute("aria-expanded") === "true" ? true : false;
+        navButton.setAttribute("aria-expanded", !expanded);
+      }
+      navButton.addEventListener("click", toggleNav);
+    </script>
+  </body>
+</html>
