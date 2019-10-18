@@ -65,22 +65,38 @@ h1 {
   z-index: 4;
 }
 
+.top button:hover {
+  cursor: pointer;
+}
+
 nav {
+  clip-path: url("#clipPath");
   position: fixed;
-  background: var(--dark-background);
+  background: hsl(216, 65%, 22%);
   top: 0;
   bottom: 0;
   right: 0;
-  transform: translateX(100vw);
+  /* transform: translateX(100vw); */
   width: 60vw;
+  overflow: hidden;
 }
 
 nav ul {
   margin-top: 70px;
+  list-style-type: none;
 }
 
-[aria-expanded="true"] ~ nav {
-  transform: translateX(0);
+nav li {
+  padding: 1em;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+nav a:hover {
+  cursor: pointer;
 }
 
 [aria-expanded="false"] .close {
@@ -93,4 +109,16 @@ nav ul {
 
 [aria-expanded="true"] .open {
   display: none;
+}
+
+circle {
+  transform-origin: 50% 10%;
+}
+
+.menu-clip {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }
